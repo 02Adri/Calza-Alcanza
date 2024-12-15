@@ -1,0 +1,93 @@
+/*Estilos Globales*/
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #fafafa;
+}
+
+/*Estilos del header*/
+header{
+    background-color: #303f9f;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+/*Estilos del main*/
+main{
+    padding: 2rem;
+}
+
+/*Estilos de los formularios*/
+.product-upload form{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.product-upload form input,
+.product-upload form button{
+    padding: 0.8rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+.product-upload form button:hover{
+    background-color: #e64a19;
+}
+
+/*Cards de productos*/
+.card-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.card{
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    background-color: white;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+}
+
+.card img{
+    width: 100%;
+    border-radius: 8px;
+
+}
+
+.card button{
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.card .delete{
+    background-color: #d32f2f;
+    color: white;
+}
+.card .edit{
+    background-color: #1976d2;
+    color: white;
+}
+.card .sold{
+    background-color:#388e3c;
+    color: white;
+}
+
+.card button:hover{
+    opacity: 0.8;
+}
+
+/*Estilos de ventas*/
+.sales-summary ul{
+    list-style: none;
+    padding: 0;
+}
+.sales-summary h3{
+    color: #388e3c;
+}
