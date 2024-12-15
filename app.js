@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded",()=>{
         totalSales +=products.price
 
         const soldItem=document.createElement("li")
-        soldItem.textContent=`${product.name} - $${products.price.toFixed(2)}`
+        soldItem.textContent=`${product.name} - $${product.price.toFixed(2)}`
         salesList.appendChild(soldItem)
         
         products.splice(index,1)
