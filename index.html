@@ -4,8 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aplicacion web de Control de productos</title>
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-   <h1>Calza&Alcanza</h1> 
+   <header>
+    <h1>Calza&Alcanza</h1>
+    <p>Gestiona tus productos de ropa y calzado a la perfección</p>
+ </header>
+ <main>
+    <!--Formulario para subir los productos-->
+    <section class="product-upload">
+        <form action="" id="product-form">
+            <input type="text" name="" id="product-name" placeholder="nombre del producto">
+            <input type="number" name="" id="product-price" placeholder="Precio del producto">
+            <input type="file" name="" id="product-image" accept="image/*" required>
+            <button type="submit">Agregar Producto</button>
+        </form>
+    </section>
+    <!--Seccion para visualizar el producto-->
+    <section class="product-list">
+        <h2>Productos Disponibles en Calza&Alcanza</h2>
+    </section>
+    <!--Seccion de Ventas-->
+    <section class="sales-summary">
+        <h2>Ventas del Día</h2>
+        <ul id="sales-list"></ul>
+        <h3>Total Vendido:$<span id="total-sales">0.00</span></h3>
+    </section>
+    <script src="/app.js"></script>
+ </main>
 </body>
 </html>
