@@ -91,3 +91,15 @@ main{
 .sales-summary h3{
     color: #388e3c;
 }
+
+@media (max-width: 768px) { /* Para pantallas de tamaño tablet o menores */
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%; /* Ajusta el ancho al 90% del contenedor */
+        max-width: 400px; /* Opcional: limita el ancho */
+    }
+}
