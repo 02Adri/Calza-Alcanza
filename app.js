@@ -17,15 +17,21 @@ document.addEventListener("DOMContentLoaded", () => {
   
       const name = document.getElementById("product-name").value;
       const price = parseFloat(document.getElementById("product-price").value);
-      const image = document.getElementById("product-image").files[0];
+      const imageFile = document.getElementById("product-image").files[0];
   
-      if (name && price && image) {
-        const imageUrl = URL.createObjectURL(image);
-        products.push({ name, price, image: imageUrl });
-        saveToLocalStorage();
-        renderProducts();
-        productForm.reset();
-        alert("Producto agregado correctamente")
+      if (name && price && imageFile) {
+        // Convertir la imagen a Base64
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          const imageBase64 = e.target.result; // Convertido a Base64
+  
+          // Crear el producto con la imagen Base64
+          products.push({ name, price, image: imageBase64 });
+          saveToLocalStorage();
+          renderProducts();
+          productForm.reset();
+        };
+        reader.readAsDataURL(imageFile);
       }
     });
   
@@ -72,7 +78,6 @@ document.addEventListener("DOMContentLoaded", () => {
       products.splice(index, 1);
       saveToLocalStorage();
       renderProducts();
-      alert("Producto eliminado Correctamente")
     };
   
     // Editar producto
@@ -84,7 +89,6 @@ document.addEventListener("DOMContentLoaded", () => {
         products[index].price = newPrice;
         saveToLocalStorage();
         renderProducts();
-        alert("Producto editado correctamente")
       }
     };
   
@@ -102,7 +106,6 @@ document.addEventListener("DOMContentLoaded", () => {
   
       renderProducts();
       renderSales();
-      alert("Producto vendido Correctamente")
     };
   });
   
