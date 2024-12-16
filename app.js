@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
         saveToLocalStorage();
         renderProducts();
         productForm.reset();
+        alert("Producto agregado correctamente")
       }
     });
   
@@ -71,6 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
       products.splice(index, 1);
       saveToLocalStorage();
       renderProducts();
+      alert("Producto eliminado Correctamente")
     };
   
     // Editar producto
@@ -82,6 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
         products[index].price = newPrice;
         saveToLocalStorage();
         renderProducts();
+        alert("Producto editado correctamente")
       }
     };
   
@@ -99,6 +102,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
       renderProducts();
       renderSales();
+      alert("Producto vendido Correctamente")
     };
   });
   
