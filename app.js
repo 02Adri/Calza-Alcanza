@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded",()=>{
 
     window.sellProduct=(index)=>{
         const product=products[index]
-        totalSales +=products.price
+        totalSales +=product.price
 
         const soldItem=document.createElement("li")
         soldItem.textContent=`${product.name} - $${product.price.toFixed(2)}`
@@ -70,6 +70,7 @@ document.addEventListener("DOMContentLoaded",()=>{
         
         products.splice(index,1)
         renderProducts()
+        
         totalSalesDisplay.textContent=totalSales.toFixed(2)
     }
 })
